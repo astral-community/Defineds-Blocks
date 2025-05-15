@@ -3,6 +3,7 @@ package dev.tobynguyen27.definedsblocks.registry
 import com.tterrag.registrate.util.DataIngredient
 import com.tterrag.registrate.util.entry.BlockEntry
 import dev.tobynguyen27.definedsblocks.DefinedsBlocks.Companion.REGISTRATE
+import dev.tobynguyen27.definedsblocks.tags.CTags
 import dev.tobynguyen27.definedsblocks.utils.TextFormatting
 import net.minecraft.client.renderer.RenderType
 import net.minecraft.tags.BlockTags
@@ -23,7 +24,7 @@ object GlassRegistry {
             .lang(englishName)
             .properties { p -> p.strength(0.3f).sound(SoundType.GLASS).noOcclusion() }
             .initialProperties(Material.GLASS)
-            .tag(BlockTags.IMPERMEABLE)
+            .tag(BlockTags.IMPERMEABLE, CTags.GLASS_TAG)
             .simpleItem()
             .recipe { ctx, prov ->
                 prov.stonecutting(DataIngredient.stacks(Blocks.GLASS.asItem().defaultInstance)) {
