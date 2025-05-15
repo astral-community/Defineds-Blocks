@@ -5,6 +5,7 @@ import com.tterrag.registrate.util.entry.BlockEntry
 import dev.tobynguyen27.definedsblocks.DefinedsBlocks.Companion.REGISTRATE
 import dev.tobynguyen27.definedsblocks.tags.CTags
 import dev.tobynguyen27.definedsblocks.utils.TextFormatting
+import java.util.function.Supplier
 import net.minecraft.client.renderer.RenderType
 import net.minecraft.tags.BlockTags
 import net.minecraft.world.level.block.Block
@@ -12,7 +13,6 @@ import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.block.SoundType
 import net.minecraft.world.level.block.state.BlockBehaviour
 import net.minecraft.world.level.material.Material
-import java.util.function.Supplier
 
 object GlassRegistry {
     fun <T : Block> block(
@@ -31,7 +31,7 @@ object GlassRegistry {
                     ctx.get()
                 }
             }
-            .addLayer { Supplier {RenderType.translucent()} }
+            .addLayer { Supplier { RenderType.translucent() } }
             .register()
     }
 

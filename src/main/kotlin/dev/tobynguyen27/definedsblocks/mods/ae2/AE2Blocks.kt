@@ -6,20 +6,17 @@ import dev.tobynguyen27.definedsblocks.DefinedsBlocks.Companion.REGISTRATE
 import dev.tobynguyen27.definedsblocks.mods.ae2.blocks.future_blocks.FutureBlock
 import dev.tobynguyen27.definedsblocks.utils.DBIdentifier
 import dev.tobynguyen27.definedsblocks.utils.TextFormatting
+import java.util.function.Supplier
 import net.minecraft.client.renderer.RenderType
 import net.minecraft.data.recipes.ShapedRecipeBuilder
 import net.minecraft.tags.BlockTags
 import net.minecraft.world.item.Items
 import net.minecraft.world.level.block.Blocks
 import net.minecraft.world.level.material.Material
-import java.util.function.Supplier
 
 object AE2Blocks {
     val FUTURA_BLOCK: BlockEntry<FutureBlock> =
-        REGISTRATE.block<FutureBlock>(
-            FutureBlock.ID,
-           ::FutureBlock
-        )
+        REGISTRATE.block<FutureBlock>(FutureBlock.ID, ::FutureBlock)
             .properties { p -> p.requiresCorrectToolForDrops().strength(1.5f, 6.0f) }
             .initialProperties(Material.STONE)
             .lang(TextFormatting.toEnglishName(FutureBlock.ID))
@@ -92,7 +89,7 @@ object AE2Blocks {
                     .save(prov)
             }
             .tag(BlockTags.STONE_BRICKS, BlockTags.MINEABLE_WITH_PICKAXE)
-            .addLayer { Supplier {RenderType.translucent()} }
+            .addLayer { Supplier { RenderType.translucent() } }
             .register()
 
     fun init() {}

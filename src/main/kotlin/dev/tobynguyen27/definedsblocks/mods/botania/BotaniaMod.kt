@@ -5,5 +5,4 @@ object BotaniaMod {
     fun init() {
         BotaniaBlocks.init()
     }
-
 }
