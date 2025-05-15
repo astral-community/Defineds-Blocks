@@ -2,13 +2,7 @@
 
 # Defined's Blocks
 
-This is a fabric mod that adds a bunch of static blocks.
-
-## Contents
-
-- Undefined block: the primary block which will be used to craft Defined's blocks in a stonecutter
-- Future block: Fake AE2 controller block, good for decorating
-- Livingwood, livingrock, etc. from Botania
+A Minecraft mod adds decorative blocks from other popular mods without requiring those mods to be installed. Perfect for enhancing builds with a wider variety of aesthetic blocks.
 
 ## Credits
 
