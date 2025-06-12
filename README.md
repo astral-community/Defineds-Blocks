@@ -9,6 +9,7 @@ A Minecraft mod adds decorative blocks from other popular mods without requiring
 - [MikoTheBoi](https://github.com/MikoTheBoi) for mossy blocks textures
 - [Applied-Energistics-2](https://github.com/AppliedEnergistics/Applied-Energistics-2)
 - [Botania](https://github.com/VazkiiMods/Botania)
+- [Hatsune Miku Plushie model](https://github.com/JameH2/Hbm-s-Nuclear-Tech-GIT/tree/space-travel-twopointfive)
 
 ## License
 
