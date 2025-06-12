@@ -20,7 +20,7 @@ import net.minecraft.world.phys.shapes.CollisionContext
 import net.minecraft.world.phys.shapes.Shapes
 import net.minecraft.world.phys.shapes.VoxelShape
 
-class Miku(properties: Properties): BaseEntityBlock(properties) {
+class Miku(properties: Properties) : BaseEntityBlock(properties) {
     companion object {
         const val ID = "hatsune_miku_plushie"
 
@@ -37,7 +37,13 @@ class Miku(properties: Properties): BaseEntityBlock(properties) {
         builder.add(FACING)
     }
 
-    override fun setPlacedBy(level: Level, pos: BlockPos, state: BlockState, placer: LivingEntity?, stack: ItemStack) {
+    override fun setPlacedBy(
+        level: Level,
+        pos: BlockPos,
+        state: BlockState,
+        placer: LivingEntity?,
+        stack: ItemStack
+    ) {
         super.setPlacedBy(level, pos, state, placer, stack)
 
         if (placer !is Player) return
@@ -48,7 +54,12 @@ class Miku(properties: Properties): BaseEntityBlock(properties) {
         return RenderShape.INVISIBLE
     }
 
-    override fun getShape(state: BlockState, level: BlockGetter, pos: BlockPos, context: CollisionContext): VoxelShape {
+    override fun getShape(
+        state: BlockState,
+        level: BlockGetter,
+        pos: BlockPos,
+        context: CollisionContext
+    ): VoxelShape {
         return AABB
     }
 
