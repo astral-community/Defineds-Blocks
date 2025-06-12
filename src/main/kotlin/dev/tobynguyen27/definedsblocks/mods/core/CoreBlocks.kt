@@ -1,10 +1,20 @@
 package dev.tobynguyen27.definedsblocks.mods.core
 
+import dev.tobynguyen27.definedsblocks.DefinedsBlocks
+import dev.tobynguyen27.definedsblocks.mods.core.blockentities.MikuBlockEntity
+import dev.tobynguyen27.definedsblocks.mods.core.blocks.Miku
 import dev.tobynguyen27.definedsblocks.registry.MossBlockRegistry
 import dev.tobynguyen27.definedsblocks.registry.MossBlockRegistry.MossBlockType
+import dev.tobynguyen27.definedsblocks.utils.TextFormatting
+import net.minecraft.client.renderer.RenderType
 import net.minecraft.world.level.block.Block
+import java.util.function.Supplier
 
 object CoreBlocks {
+    val MIKU = DefinedsBlocks.REGISTRATE.block<Miku>(Miku.ID, ::Miku).lang(TextFormatting.toEnglishName(Miku.ID)).blockEntity { type, pos, state ->
+        MikuBlockEntity(type, pos, state)
+    }.build().addLayer { Supplier { RenderType.translucent() } }.simpleItem().register()
+
     val MOSSIER_STONE_BRICKS =
         MossBlockRegistry.block("mossier_stone_bricks", MossBlockType.STONE_BRICKS, ::Block)
     val FLOWERY_MOSSY_STONE_BRICKS =

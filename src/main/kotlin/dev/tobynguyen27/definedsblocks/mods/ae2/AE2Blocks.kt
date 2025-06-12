@@ -4,7 +4,7 @@ import com.tterrag.registrate.providers.RegistrateRecipeProvider.has
 import com.tterrag.registrate.util.entry.BlockEntry
 import dev.tobynguyen27.definedsblocks.DefinedsBlocks.Companion.REGISTRATE
 import dev.tobynguyen27.definedsblocks.mods.ae2.blocks.future_blocks.FutureBlock
-import dev.tobynguyen27.definedsblocks.utils.DBIdentifier
+import dev.tobynguyen27.definedsblocks.utils.Identifier
 import dev.tobynguyen27.definedsblocks.utils.TextFormatting
 import java.util.function.Supplier
 import net.minecraft.client.renderer.RenderType
@@ -30,7 +30,7 @@ object AE2Blocks {
                     .modelFile(
                         prov
                             .models()
-                            .getExistingFile(DBIdentifier("block/futura_block/futura_block_online"))
+                            .getExistingFile(Identifier("block/futura_block/futura_block_online"))
                     )
                     .addModel()
                     .partialState()
@@ -40,7 +40,7 @@ object AE2Blocks {
                         prov
                             .models()
                             .getExistingFile(
-                                DBIdentifier("block/futura_block/futura_block_column_online")
+                                Identifier("block/futura_block/futura_block_column_online")
                             )
                     )
                     .rotationX(90)
@@ -53,7 +53,7 @@ object AE2Blocks {
                         prov
                             .models()
                             .getExistingFile(
-                                DBIdentifier("block/futura_block/futura_block_column_online")
+                                Identifier("block/futura_block/futura_block_column_online")
                             )
                     )
                     .addModel()
@@ -64,7 +64,7 @@ object AE2Blocks {
                         prov
                             .models()
                             .getExistingFile(
-                                DBIdentifier("block/futura_block/futura_block_column_online")
+                                Identifier("block/futura_block/futura_block_column_online")
                             )
                     )
                     .rotationX(90)
@@ -74,7 +74,7 @@ object AE2Blocks {
             .model { ctx, prov ->
                 prov.withExistingParent(
                     ctx.name,
-                    DBIdentifier("block/futura_block/futura_block_online")
+                    Identifier("block/futura_block/futura_block_online")
                 )
             }
             .build()

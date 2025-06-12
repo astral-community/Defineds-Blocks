@@ -5,7 +5,7 @@ import dev.tobynguyen27.definedsblocks.mods.ae2.AE2Mod
 import dev.tobynguyen27.definedsblocks.mods.botania.BotaniaBlocks
 import dev.tobynguyen27.definedsblocks.mods.core.CoreBlocks
 import dev.tobynguyen27.definedsblocks.mods.core.CoreMod
-import dev.tobynguyen27.definedsblocks.utils.DBIdentifier
+import dev.tobynguyen27.definedsblocks.utils.Identifier
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder
 import org.slf4j.LoggerFactory
@@ -19,7 +19,7 @@ class DefinedsBlocks : ModInitializer {
         val REGISTRATE = Registrate.create(MOD_ID)
 
         val ITEM_GROUP =
-            FabricItemGroupBuilder.build(DBIdentifier("general")) {
+            FabricItemGroupBuilder.build(Identifier("general")) {
                 CoreBlocks.MOSSIER_STONE_BRICKS.get().asItem().defaultInstance
             }
     }
